@@ -10,6 +10,8 @@
 
 int Y;
 int X;
+int ComputerScoreNumber;
+int PlayerScoreNumber;
 
 @interface Game : UIViewController
 {
@@ -17,7 +19,10 @@ int X;
     IBOutlet UIButton *StartButton;
     IBOutlet UIImageView *Player;
     IBOutlet UIImageView *Computer;
-    
+    IBOutlet UILabel *PlayerScore;
+    IBOutlet UILabel *ComputerScore;
+    IBOutlet UILabel *WinOrLose;
+    IBOutlet UIButton *Exit;
     
     
     NSTimer *timer;
@@ -25,7 +30,8 @@ int X;
 
 -(IBAction)StartButton:(id)sender;
 -(void)BallMovement;
--(void)ComupterMovement;
+-(void)ComputerMovement;
+-(void)Collision;
 
 
 @end

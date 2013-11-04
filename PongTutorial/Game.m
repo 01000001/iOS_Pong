@@ -14,6 +14,24 @@
 
 @implementation Game
 
+-(void)Collision
+{
+    //the ball image touches any part of the player image
+    if (CGRectIntersectsRect(Ball.frame, Player.frame)) {
+        
+        Y = arc4random() %5;
+        
+        //we have to convert Y to a negative number since the player is at the bottom at the screen, so the ball goes up
+        Y = 0 - 5;
+    }
+    
+    if (CGRectIntersectsRect(Ball.frame, Computer.frame)) {
+        
+        Y = arc4random() %5;
+    }
+    
+}
+
 -(void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
 {
     // allows dragging
@@ -42,7 +60,7 @@
     }
 }
 
--(void)ComupterMovement
+-(void)ComputerMovement
 {
     
     // if Computer.center.x > Ball.center.x then the computer to the left compered to the ball, move the computer to the left
@@ -68,6 +86,10 @@
 
 -(IBAction)StartButton:(id)sender
 {
+    //every time we push the start button it becomes hidden
+    StartButton.hidden = YES;
+    Exit.hidden = YES;
+    
     // running the random number generator to produce anything between 0 an 10 inc 0 and 10
     Y = arc4random() % 11;
     // make this range from -5 to 5, so 50-50 chance the ball is gonna go up or down
@@ -91,8 +113,9 @@
 
 -(void)BallMovement
 {
-    
-    [self ComupterMovement];
+    //run the code ComputerMovement and Collision all the time when BallMovement runs
+    [self ComputerMovement];
+    [self Collision];
     
     // changing X and Y in order to move to ball
     Ball.center = CGPointMake(Ball.center.x + X, Ball.center.y + Y);
@@ -106,6 +129,47 @@
     
     if (Ball.center.x > 305) {
         X = 0 - X;
+    }
+    
+    //scores
+    if (Ball.center.y < 0) {
+        PlayerScoreNumber = PlayerScoreNumber + 1;
+        PlayerScore.text = [NSString stringWithFormat:@"%i", PlayerScoreNumber];
+        
+        [timer invalidate];
+        StartButton.hidden = NO;
+        
+        //place computer and ball back to center
+        Ball.center = CGPointMake(160, 239);
+        Computer.center = CGPointMake(160, 32);
+        
+        if (PlayerScoreNumber == 3) {
+            StartButton.hidden = YES;
+            Exit.hidden = NO;
+            WinOrLose.hidden = NO;
+            WinOrLose.text = [NSString stringWithFormat:@"You Win!"];
+            
+        }
+    }
+    
+    if (Ball.center.y > 580) {
+        ComputerScoreNumber = ComputerScoreNumber + 1;
+        ComputerScore.text = [NSString stringWithFormat:@"%i", ComputerScoreNumber];
+        
+        [timer invalidate];
+        StartButton.hidden = NO;
+        
+        //place computer and ball back to center
+        Ball.center = CGPointMake(160, 239);
+        Computer.center = CGPointMake(160, 32);
+        
+        if (ComputerScoreNumber == 3) {
+            StartButton.hidden = YES;
+            Exit.hidden = NO;
+            WinOrLose.hidden = NO;
+            WinOrLose.text = [NSString stringWithFormat:@"You Lose!"];
+            
+        }
     }
     
     
@@ -122,6 +186,8 @@
 
 - (void)viewDidLoad
 {
+    PlayerScoreNumber = 0;
+    ComputerScoreNumber = 0;
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
 }
