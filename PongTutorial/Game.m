@@ -14,6 +14,58 @@
 
 @implementation Game
 
+-(void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    // allows dragging
+    UITouch *Drag = [[event allTouches] anyObject];
+    
+    //set the player to the point on the screen where the toch is
+    Player.center = [Drag locationInView:self.view];
+    
+    // dont move player vertically, lock y value
+    if (Player.center.y > 535) {
+        Player.center = CGPointMake(Player.center.x, 535);
+    }
+    
+    if (Player.center.y < 535) {
+        Player.center = CGPointMake(Player.center.x, 535);
+    }
+    
+    
+    //prevent player to leave the screen
+    if (Player.center.x < 37) {
+        Player.center = CGPointMake(37, Player.center.y);
+    }
+    
+    if (Player.center.x > 283) {
+        Player.center = CGPointMake(283, Player.center.y);
+    }
+}
+
+-(void)ComupterMovement
+{
+    
+    // if Computer.center.x > Ball.center.x then the computer to the left compered to the ball, move the computer to the left
+    if (Computer.center.x > Ball.center.x) {
+        Computer.center = CGPointMake(Computer.center.x - 2, Computer.center.y);
+    }
+    
+    // if the computer is to the left to the ball, move it to the right
+    if (Computer.center.x < Ball.center.x) {
+        Computer.center = CGPointMake(Computer.center.x + 2, Computer.center.y);
+    }
+    
+    //prevent computer to leave the screen
+    if (Computer.center.x < 37) {
+        Computer.center = CGPointMake(37, Computer.center.y);
+    }
+    
+    if (Computer.center.x > 283) {
+        Computer.center = CGPointMake(283, Computer.center.y);
+    }
+    
+}
+
 -(IBAction)StartButton:(id)sender
 {
     // running the random number generator to produce anything between 0 an 10 inc 0 and 10
@@ -39,6 +91,9 @@
 
 -(void)BallMovement
 {
+    
+    [self ComupterMovement];
+    
     // changing X and Y in order to move to ball
     Ball.center = CGPointMake(Ball.center.x + X, Ball.center.y + Y);
     
