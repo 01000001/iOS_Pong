@@ -21,6 +21,15 @@
 		EBD901CC1827AAD60055F10C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBD901AE1827AAD60055F10C /* UIKit.framework */; };
 		EBD901D41827AAD60055F10C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EBD901D21827AAD60055F10C /* InfoPlist.strings */; };
 		EBD901D61827AAD60055F10C /* PongTutorialTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EBD901D51827AAD60055F10C /* PongTutorialTests.m */; };
+		EBD901E71827ACC30055F10C /* Ball.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EBD901DF1827ACC30055F10C /* Ball.jpg */; };
+		EBD901E81827ACC30055F10C /* GameBackGround.png in Resources */ = {isa = PBXBuildFile; fileRef = EBD901E01827ACC30055F10C /* GameBackGround.png */; };
+		EBD901E91827ACC30055F10C /* Menu01.png in Resources */ = {isa = PBXBuildFile; fileRef = EBD901E11827ACC30055F10C /* Menu01.png */; };
+		EBD901EA1827ACC30055F10C /* Menu02.png in Resources */ = {isa = PBXBuildFile; fileRef = EBD901E21827ACC30055F10C /* Menu02.png */; };
+		EBD901EB1827ACC30055F10C /* Menu03.png in Resources */ = {isa = PBXBuildFile; fileRef = EBD901E31827ACC30055F10C /* Menu03.png */; };
+		EBD901EC1827ACC30055F10C /* Menu04.png in Resources */ = {isa = PBXBuildFile; fileRef = EBD901E41827ACC30055F10C /* Menu04.png */; };
+		EBD901ED1827ACC30055F10C /* Menu05.png in Resources */ = {isa = PBXBuildFile; fileRef = EBD901E51827ACC30055F10C /* Menu05.png */; };
+		EBD901EE1827ACC30055F10C /* Player.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EBD901E61827ACC30055F10C /* Player.jpg */; };
+		EBD901F41827B2960055F10C /* Game.m in Sources */ = {isa = PBXBuildFile; fileRef = EBD901F31827B2960055F10C /* Game.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +62,16 @@
 		EBD901D11827AAD60055F10C /* PongTutorialTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PongTutorialTests-Info.plist"; sourceTree = "<group>"; };
 		EBD901D31827AAD60055F10C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		EBD901D51827AAD60055F10C /* PongTutorialTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PongTutorialTests.m; sourceTree = "<group>"; };
+		EBD901DF1827ACC30055F10C /* Ball.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Ball.jpg; sourceTree = "<group>"; };
+		EBD901E01827ACC30055F10C /* GameBackGround.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GameBackGround.png; sourceTree = "<group>"; };
+		EBD901E11827ACC30055F10C /* Menu01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Menu01.png; sourceTree = "<group>"; };
+		EBD901E21827ACC30055F10C /* Menu02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Menu02.png; sourceTree = "<group>"; };
+		EBD901E31827ACC30055F10C /* Menu03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Menu03.png; sourceTree = "<group>"; };
+		EBD901E41827ACC30055F10C /* Menu04.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Menu04.png; sourceTree = "<group>"; };
+		EBD901E51827ACC30055F10C /* Menu05.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Menu05.png; sourceTree = "<group>"; };
+		EBD901E61827ACC30055F10C /* Player.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Player.jpg; sourceTree = "<group>"; };
+		EBD901F21827B2960055F10C /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Game.h; sourceTree = "<group>"; };
+		EBD901F31827B2960055F10C /* Game.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Game.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +136,8 @@
 				EBD901BC1827AAD60055F10C /* Main.storyboard */,
 				EBD901BF1827AAD60055F10C /* ViewController.h */,
 				EBD901C01827AAD60055F10C /* ViewController.m */,
+				EBD901F21827B2960055F10C /* Game.h */,
+				EBD901F31827B2960055F10C /* Game.m */,
 				EBD901C21827AAD60055F10C /* Images.xcassets */,
 				EBD901B11827AAD60055F10C /* Supporting Files */,
 			);
@@ -126,6 +147,14 @@
 		EBD901B11827AAD60055F10C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				EBD901DF1827ACC30055F10C /* Ball.jpg */,
+				EBD901E01827ACC30055F10C /* GameBackGround.png */,
+				EBD901E11827ACC30055F10C /* Menu01.png */,
+				EBD901E21827ACC30055F10C /* Menu02.png */,
+				EBD901E31827ACC30055F10C /* Menu03.png */,
+				EBD901E41827ACC30055F10C /* Menu04.png */,
+				EBD901E51827ACC30055F10C /* Menu05.png */,
+				EBD901E61827ACC30055F10C /* Player.jpg */,
 				EBD901B21827AAD60055F10C /* PongTutorial-Info.plist */,
 				EBD901B31827AAD60055F10C /* InfoPlist.strings */,
 				EBD901B61827AAD60055F10C /* main.m */,
@@ -228,9 +257,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBD901EA1827ACC30055F10C /* Menu02.png in Resources */,
 				EBD901C31827AAD60055F10C /* Images.xcassets in Resources */,
+				EBD901EE1827ACC30055F10C /* Player.jpg in Resources */,
 				EBD901B51827AAD60055F10C /* InfoPlist.strings in Resources */,
+				EBD901E81827ACC30055F10C /* GameBackGround.png in Resources */,
+				EBD901E91827ACC30055F10C /* Menu01.png in Resources */,
+				EBD901EB1827ACC30055F10C /* Menu03.png in Resources */,
+				EBD901EC1827ACC30055F10C /* Menu04.png in Resources */,
+				EBD901E71827ACC30055F10C /* Ball.jpg in Resources */,
 				EBD901BE1827AAD60055F10C /* Main.storyboard in Resources */,
+				EBD901ED1827ACC30055F10C /* Menu05.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,6 +289,7 @@
 				EBD901C11827AAD60055F10C /* ViewController.m in Sources */,
 				EBD901BB1827AAD60055F10C /* AppDelegate.m in Sources */,
 				EBD901B71827AAD60055F10C /* main.m in Sources */,
+				EBD901F41827B2960055F10C /* Game.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
